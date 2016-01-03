@@ -29,5 +29,5 @@ make busybox -j $(grep ^processor /proc/cpuinfo | wc -l)
 # It uses the file 'busybox.links' for this
 make install
 
-cd ../../..
+cd $WORKPATH
 

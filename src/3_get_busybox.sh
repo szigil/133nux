@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Grab everything after the '=' character
-DOWNLOAD_URL=$(grep -i BUSYBOX_SOURCE_URL .config | cut -f2 -d'=')
+DOWNLOAD_URL=$(grep -i BUSYBOX_SOURCE_URL sources | cut -f2 -d'=')
 
 # Grab everything after the last '/' character
 ARCHIVE_FILE=${DOWNLOAD_URL##*/}
@@ -13,12 +13,12 @@ cd source
 wget -c $DOWNLOAD_URL
 
 # Delete folder with previously extracted busybox
-rm -rf ../work/busybox
-mkdir ../work/busybox
+rm -rf $WORKPATH/work/busybox
+mkdir $WORKPATH/work/busybox
 
 # Extract busybox to folder 'busybox'
 # Full path will be something like 'work/busybox/busybox-1.23.1'
-tar -xvf $ARCHIVE_FILE -C ../work/busybox
+tar -xvf $ARCHIVE_FILE -C $WORKPATH/work/busybox
 
-cd ..
+cd $WORKPATH
 

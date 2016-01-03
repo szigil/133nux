@@ -10,5 +10,5 @@ cd rootfs
 # Packs the current folder structure in "cpio.gz" archive.
 find . | cpio -H newc -o | gzip > ../rootfs.cpio.gz
 
-cd ../..
+cd $WORKPATH
 

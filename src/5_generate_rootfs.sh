@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: change most of this to a mere copy of the directories
+
 cd work
 
 rm -rf rootfs
@@ -8,8 +10,8 @@ cd busybox
 cd $(ls -d *)
 
 # Copy all BusyBox generated stuff to the location of our "initramfs" folder.
-cp -R _install ../../rootfs
-cd ../../rootfs
+cp -R _install $WORKPATH/work/rootfs
+cd $WORKPATH/work/rootfs
 
 # Remove "linuxrc" which is used when we boot in "RAM disk" mode. 
 rm -f linuxrc
@@ -24,6 +26,7 @@ mkdir sys
 mkdir tmp
 
 # "1" means that only the owner of a file/directory (or root) can remove it.
+# KEEP THIS
 chmod 1777 tmp
 
 cd etc
@@ -112,5 +115,5 @@ cp ../../.config src
 chmod +r src/*.sh
 chmod +r src/.config
 
-cd ../..
+cd $WORKPATH
 

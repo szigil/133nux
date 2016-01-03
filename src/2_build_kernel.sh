@@ -19,5 +19,5 @@ sed -i "s/.*CONFIG_DEFAULT_HOSTNAME.*/CONFIG_DEFAULT_HOSTNAME=\"minimal\"/" .con
 # http://unix.stackexchange.com/questions/5518/what-is-the-difference-between-the-following-kernel-makefile-terms-vmlinux-vmlinux
 make bzImage -j $(grep ^processor /proc/cpuinfo | wc -l)
 
-cd ../../..
+cd $WORKPATH
 

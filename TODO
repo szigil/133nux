@@ -1,0 +1,2 @@
+Finish changing the '../../../../'s to $WORKPATH
+change src/5_generate_rootfs.sh to just copying the contents of src/rootfs

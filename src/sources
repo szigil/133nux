@@ -10,3 +10,15 @@ KERNEL_SOURCE_URL=https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.1.6.tar.x
 #
 BUSYBOX_SOURCE_URL=http://busybox.net/downloads/busybox-1.23.2.tar.bz2
 
+# GCC
+http://www.netgull.com/gcc/releases/gcc-5.3.0/gcc-5.3.0.tar.gz
+
+# GDB
+http://ftp.gnu.org/gnu/gdb/gdb-7.10.tar.gz
+
+# NVI
+http://www.kotnet.org/~skimo/nvi/devel/nvi-1.81.5.tar.gz
+
+# Linux man pages
+https://www.kernel.org/pub/linux/docs/man-pages/man-pages-4.04.tar.gz
+

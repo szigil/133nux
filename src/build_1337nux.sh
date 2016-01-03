@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Set the path to a variable to strip those '../../../'s everywhere
+export WORKPATH=$(pwd)
+
 sh 0_prepare.sh
 sh 1_get_kernel.sh
 sh 2_build_kernel.sh
